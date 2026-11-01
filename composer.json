@@ -1,0 +1,26 @@
+{
+  "name": "chonnaweepro/openid-to-php",
+  "description": "Small OpenID Connect relying-party client for PHP (Authorization Code + PKCE, signature and claim checks).",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "firebase/php-jwt": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "OpenIdToPhp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OpenIdToPhp\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "php tests/run.php && php tests/session_test.php && php tests/flow_test.php"
+  }
+}
